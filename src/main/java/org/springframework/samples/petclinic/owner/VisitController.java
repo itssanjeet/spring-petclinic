@@ -67,7 +67,6 @@ class VisitController {
 		pet.setVisitsInternal(this.visits.findByPetId(petId));
 		model.put("pet", pet);
 		Visit visit = new Visit();
-		pet.addVisit(visit);
 		return visit;
 	}
 
