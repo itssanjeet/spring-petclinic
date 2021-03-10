@@ -205,7 +205,6 @@ class ClinicServiceTests {
 		Pet pet7 = this.pets.findById(7);
 		int found = pet7.getVisits().size();
 		Visit visit = new Visit();
-		pet7.addVisit(visit);
 		visit.setDescription("test");
 		this.visits.save(visit);
 		this.pets.save(pet7);
@@ -221,7 +220,6 @@ class ClinicServiceTests {
 		assertThat(visits).hasSize(2);
 		Visit[] visitArr = visits.toArray(new Visit[visits.size()]);
 		assertThat(visitArr[0].getDate()).isNotNull();
-		assertThat(visitArr[0].getPetId()).isEqualTo(7);
 	}
 
 }

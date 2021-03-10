@@ -38,11 +38,9 @@ import org.springframework.samples.petclinic.owner.Pet;
 @Table(name = "visits")
 public class Visit extends BaseEntity {
 
-	@Column(name = "visit_date")
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Column(name = "date")
 	private LocalDate date;
 
-	@NotEmpty
 	@Column(name = "description")
 	private String description;
 
